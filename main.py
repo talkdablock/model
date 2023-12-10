@@ -9,7 +9,6 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.schema import BaseOutputParser
 
 from fastapi import FastAPI
-# from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 from langserve import add_routes
@@ -63,7 +62,3 @@ add_routes(
     category_chain,
     path="/ethereum",
 )
-
-# if __name__ == '__main__':
-#     import uvicorn
-#     uvicorn.run(app, host="localhost", port=8080)
